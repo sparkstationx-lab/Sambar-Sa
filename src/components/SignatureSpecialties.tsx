@@ -17,7 +17,7 @@ export function SignatureSpecialties({
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl mb-14 sm:mb-16"
         >
           <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#8F5F26] mb-3">
@@ -39,7 +39,7 @@ export function SignatureSpecialties({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{
-                duration: 0.55,
+                duration: 0.8,
                 delay: idx * 0.06,
                 ease: [0.16, 1, 0.3, 1],
               }}
@@ -74,7 +74,7 @@ export function SignatureSpecialties({
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.55, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
           className="mt-12 sm:mt-16 flex justify-center"
         >
           <a

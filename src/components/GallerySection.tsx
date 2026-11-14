@@ -28,7 +28,7 @@ export function GallerySection() {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl mb-14 sm:mb-16"
         >
           <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#8F5F26] mb-3">
@@ -47,7 +47,7 @@ export function GallerySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{
-                duration: 0.5,
+                duration: 0.8,
                 delay: idx * 0.05,
                 ease: [0.16, 1, 0.3, 1],
               }}
