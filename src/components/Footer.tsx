@@ -22,7 +22,7 @@ export function Footer({ onNavigateHome, onNavigateMenu }: FooterProps) {
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"
       >
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-[#F8F5EF]/12">

@@ -37,7 +37,7 @@ export function Hero({ onExploreMenu, onReserveClick }: HeroProps) {
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center"
         >
           <p className="text-xs font-medium tracking-[0.24em] uppercase text-[#F8F5EF]/85 mb-4">
@@ -79,7 +79,7 @@ export function Hero({ onExploreMenu, onReserveClick }: HeroProps) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 1.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         className="relative z-10 w-full px-5 pb-8 sm:pb-10 pt-6 flex items-center justify-center"
       >
         <div className="inline-flex items-center gap-2.5 text-sm text-[#F8F5EF]/90">

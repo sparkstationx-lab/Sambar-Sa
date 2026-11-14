@@ -91,7 +91,7 @@ export function ReservationSection() {
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5"
           >
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#8F5F26] mb-3">
@@ -124,7 +124,7 @@ export function ReservationSection() {
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.8, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7"
           >
             {submittedEnquiry ? (

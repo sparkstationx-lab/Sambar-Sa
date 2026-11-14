@@ -57,7 +57,7 @@ export function MenuSection() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12"
         >
           <div className="max-w-2xl">
@@ -183,7 +183,7 @@ export function MenuSection() {
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.05 }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
               >
                 <div className="flex items-baseline justify-between gap-4 pb-3 border-b border-[#30231D]/15 mb-6">
                   <h3 className="font-serif text-2xl sm:text-[1.75rem] text-[#30231D]">

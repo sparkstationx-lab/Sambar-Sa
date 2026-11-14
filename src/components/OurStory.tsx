@@ -18,7 +18,7 @@ export function OurStory({ onExploreMenu }: OurStoryProps) {
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 order-2 lg:order-1"
           >
             <div className="aspect-[4/5] max-w-lg mx-auto lg:mx-0 overflow-hidden bg-[#E9E0D3] rounded-2xl">
@@ -35,7 +35,7 @@ export function OurStory({ onExploreMenu }: OurStoryProps) {
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.8, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 order-1 lg:order-2 flex flex-col items-start"
           >
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#8F5F26] mb-3">

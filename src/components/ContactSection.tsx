@@ -11,7 +11,7 @@ export function ContactSection() {
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 flex flex-col justify-between"
           >
             <div>
@@ -108,7 +108,7 @@ export function ContactSection() {
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.8, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 flex flex-col"
           >
             <div className="w-full h-80 sm:h-96 lg:h-full min-h-[340px] bg-[#E9E0D3] rounded-2xl overflow-hidden border border-[#30231D]/12">
