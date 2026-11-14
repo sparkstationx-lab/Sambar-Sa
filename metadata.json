@@ -1,0 +1,6 @@
+{
+  "name": "SambharSa",
+  "description": "Authentic South Indian restaurant in Gwalior, Madhya Pradesh, serving signature benne dosas, crisp classics, and comforting traditional cuisine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
