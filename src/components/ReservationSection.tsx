@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react';
+import { motion } from 'motion/react';
 import { MessageCircle, Phone, CheckCircle2 } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 
@@ -86,7 +87,13 @@ export function ReservationSection() {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          <div className="lg:col-span-5">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5"
+          >
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#8F5F26] mb-3">
               Reservations
             </p>
@@ -111,9 +118,15 @@ export function ReservationSection() {
                 .
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="lg:col-span-7">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7"
+          >
             {submittedEnquiry ? (
               <div className="bg-[#F8F5EF] border border-[#30231D]/12 rounded-2xl p-8 sm:p-10">
                 <div className="flex items-start gap-3 mb-4">
@@ -344,7 +357,7 @@ export function ReservationSection() {
                 </div>
               </form>
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

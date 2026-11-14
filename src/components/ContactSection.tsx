@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import { MapPin, MessageCircle, Navigation, Phone } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 
@@ -6,7 +7,13 @@ export function ContactSection() {
     <section id="contact" className="py-20 sm:py-28 bg-[#F8F5EF]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-stretch">
-          <div className="lg:col-span-5 flex flex-col justify-between">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 flex flex-col justify-between"
+          >
             <div>
               <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#8F5F26] mb-3">
                 Location &amp; Contact
@@ -95,9 +102,15 @@ export function ContactSection() {
                 Get Directions
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="lg:col-span-7 flex flex-col">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7 flex flex-col"
+          >
             <div className="w-full h-80 sm:h-96 lg:h-full min-h-[340px] bg-[#E9E0D3] rounded-2xl overflow-hidden border border-[#30231D]/12">
               <iframe
                 title="SambharSa Location Map — Gwalior, Madhya Pradesh"
@@ -107,7 +120,7 @@ export function ContactSection() {
                 className="w-full h-full border-0"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 
 interface FooterProps {
@@ -17,7 +18,13 @@ const FOOTER_LINKS = [
 export function Footer({ onNavigateHome, onNavigateMenu }: FooterProps) {
   return (
     <footer className="bg-[#30231D] text-[#F8F5EF] py-16 sm:py-20">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12"
+      >
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-[#F8F5EF]/12">
           <div className="md:col-span-5">
             <a
@@ -82,7 +89,7 @@ export function Footer({ onNavigateHome, onNavigateMenu }: FooterProps) {
           <p>© {new Date().getFullYear()} SambharSa. All rights reserved.</p>
           <p>Gwalior, Madhya Pradesh</p>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }

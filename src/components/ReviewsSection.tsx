@@ -6,7 +6,13 @@ export function ReviewsSection() {
   return (
     <section className="py-20 sm:py-28 bg-[#E9E0D3]/45 border-b border-[#30231D]/10">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 sm:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 sm:mb-16"
+        >
           <div className="max-w-xl">
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#8F5F26] mb-3">
               Guest Impressions
@@ -49,7 +55,7 @@ export function ReviewsSection() {
               <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
             </a>
           </div>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {CUSTOMER_REVIEWS.map((review, idx) => (

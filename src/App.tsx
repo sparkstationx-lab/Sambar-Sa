@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { MotionConfig } from 'motion/react';
 import { Navbar, PageRoute } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { SignatureSpecialties } from './components/SignatureSpecialties';
@@ -84,36 +85,38 @@ export default function App() {
   );
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8F5EF] text-[#30231D]">
-      <Navbar
-        currentPage={currentPage}
-        onNavigateHome={navigateToHome}
-        onNavigateMenu={navigateToMenu}
-      />
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen flex flex-col bg-[#F8F5EF] text-[#30231D]">
+        <Navbar
+          currentPage={currentPage}
+          onNavigateHome={navigateToHome}
+          onNavigateMenu={navigateToMenu}
+        />
 
-      <main className="flex-1">
-        {currentPage === 'menu' ? (
-          <MenuPage onNavigateHome={navigateToHome} />
-        ) : (
-          <>
-            <Hero
-              onExploreMenu={navigateToMenu}
-              onReserveClick={() => navigateToHome('reserve')}
-            />
-            <SignatureSpecialties onExploreMenu={navigateToMenu} />
-            <OurStory onExploreMenu={navigateToMenu} />
-            <GallerySection />
-            <ReviewsSection />
-            <ReservationSection />
-            <ContactSection />
-          </>
-        )}
-      </main>
+        <main className="flex-1">
+          {currentPage === 'menu' ? (
+            <MenuPage onNavigateHome={navigateToHome} />
+          ) : (
+            <>
+              <Hero
+                onExploreMenu={navigateToMenu}
+                onReserveClick={() => navigateToHome('reserve')}
+              />
+              <SignatureSpecialties onExploreMenu={navigateToMenu} />
+              <OurStory onExploreMenu={navigateToMenu} />
+              <GallerySection />
+              <ReviewsSection />
+              <ReservationSection />
+              <ContactSection />
+            </>
+          )}
+        </main>
 
-      <Footer
-        onNavigateHome={navigateToHome}
-        onNavigateMenu={navigateToMenu}
-      />
-    </div>
+        <Footer
+          onNavigateHome={navigateToHome}
+          onNavigateMenu={navigateToMenu}
+        />
+      </div>
+    </MotionConfig>
   );
 }

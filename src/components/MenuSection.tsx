@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { motion } from 'motion/react';
 import { Search, X } from 'lucide-react';
 import { MENU_CATEGORIES } from '../data/menuData';
 
@@ -53,7 +54,12 @@ export function MenuSection() {
       className="py-14 sm:py-20 bg-[#FFFFFF] border-b border-[#30231D]/10"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12"
+        >
           <div className="max-w-2xl">
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#8F5F26] mb-3">
               Our Menu
@@ -95,7 +101,7 @@ export function MenuSection() {
               )}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Category Navigation - horizontal scroll on mobile, clean wrap on desktop */}
         <div className="border-b border-[#30231D]/12 mb-12">
@@ -172,7 +178,13 @@ export function MenuSection() {
         ) : (
           <div className="space-y-16">
             {visibleCategories.map((category) => (
-              <div key={category.id}>
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              >
                 <div className="flex items-baseline justify-between gap-4 pb-3 border-b border-[#30231D]/15 mb-6">
                   <h3 className="font-serif text-2xl sm:text-[1.75rem] text-[#30231D]">
                     {category.name}
@@ -208,7 +220,7 @@ export function MenuSection() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         )}

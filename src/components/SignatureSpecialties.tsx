@@ -70,7 +70,13 @@ export function SignatureSpecialties({
           ))}
         </div>
 
-        <div className="mt-12 sm:mt-16 flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.55, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-12 sm:mt-16 flex justify-center"
+        >
           <a
             href="/menu"
             onClick={(e) => {
@@ -82,7 +88,7 @@ export function SignatureSpecialties({
             View Complete Menu
             <ArrowRight className="w-4 h-4" strokeWidth={1.75} />
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
